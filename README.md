@@ -1,27 +1,37 @@
-# Handwritten-symbol-classification-svm-ann
+# Handwritten Symbol Classification (SVM vs ANN)
+
 ## Problem
-Built an image classification system to recognize handwritten mathematical symbols, with the goal of systematically investigating how different feature extraction techniques and classifiers influence classification accuracy.
+Developed an image classification system to recognize handwritten mathematical symbols, with a focus on analyzing how different feature extraction techniques and classifiers impact performance.
 
 ## Dataset
-Custom-generated dataset of handwritten mathematical symbols, consisting of multiple classes with grayscale image samples. Each class contains variations in writing style, introducing intra-class variability and inter-class similarity.
+Custom dataset of grayscale handwritten mathematical symbols across multiple classes. The dataset includes variations in writing styles, leading to intra-class variability and inter-class similarity.
 
 ## Approach
-Implemented and compared two classifiers:
-- Support Vector Machine (SVM)
-- Artificial Neural Network (ANN)
-
-Extracted and evaluated three feature representations:
-- Histogram of Oriented Gradients (HOG)
-- Local Binary Patterns (LBP)
-- Raw pixel values
-
-Conducted a controlled comparison by training each classifier on all feature types to analyze which feature–model combinations yield the best performance.
+- Implemented two classifiers:
+  - Support Vector Machine (SVM)  
+  - Artificial Neural Network (ANN)  
+- Extracted and compared three feature representations:
+  - Histogram of Oriented Gradients (HOG)  
+  - Local Binary Patterns (LBP)  
+  - Raw pixel values  
+- Performed a systematic comparison by training each classifier on all feature types to evaluate feature–model interactions.
 
 ## Evaluation
-Evaluated models using classification accuracy across all feature–classifier combinations. Generated confusion matrices for the best-performing configuration to analyze misclassification patterns and class-level performance.
+Evaluated models using classification accuracy across all feature–classifier combinations. Confusion matrices were generated for the best-performing setup to analyze misclassification patterns.
 
 ## Results
-Performance varied significantly depending on the feature representation. HOG-based features generally provided the strongest results due to their ability to capture shape and edge information, while raw pixel inputs were less effective. The comparative analysis highlights the importance of feature extraction in traditional machine learning pipelines.
+HOG-based features consistently achieved the best performance, highlighting the importance of edge and shape-based representations in image classification. Raw pixel inputs performed хуже, demonstrating the limitations of unprocessed features in traditional ML models.
+
+## Key Learnings
+- Feature engineering plays a critical role in traditional machine learning pipelines.  
+- Structured features such as HOG significantly improve classifier performance compared to raw inputs.  
 
 ## Future Improvements
-Potential improvements include hyperparameter tuning for both SVM and ANN, exploring additional feature extraction methods, applying dimensionality reduction techniques, and extending the approach using convolutional neural networks for end-to-end feature learning.
+- Perform hyperparameter tuning for SVM and ANN  
+- Explore additional feature extraction methods  
+- Apply dimensionality reduction (e.g., PCA)  
+- Extend to CNN-based models for end-to-end feature learning
+
+## Visualizations
+- Accuracy comparison across feature–classifier combinations  
+- Confusion matrix for best-performing model  
